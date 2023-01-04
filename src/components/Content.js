@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import bootstrap from 'bootstrap'
 
 
 export default function Content() {
@@ -8,7 +9,7 @@ export default function Content() {
     useEffect(() => {
       axios
         .get(
-            `https://cdn.contentful.com/spaces/jpjx9bkdak1b/environments/master/entries?access_token=Bzv14kjA5HQefUh4bx4QQlPtFeUyBqob6rFyL2RvunQ`
+            `https://cdn.contentful.com/spaces/2jvu3rhkirbd/environments/master/entries?access_token=TnpG2u1yvYFugX1rESNZsaOn_Yd9T3tdSSX3Y94S8EI`
         )
         .then((response) => {
           setTitle(response.data.items[0].fields.title);
