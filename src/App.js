@@ -1,14 +1,40 @@
 import "./App.css";
 import Content from "./components/Content";
 import Navbar from "./components/Navbar";
-// import bootstrap from "bootstrap";
+import { useEffect, useState } from "react";
+import client from "./client";
 
 function App() {
+  const [items, setItems] = useState([]);
+
+  useEffect(() => {
+    client
+      .getEntries({
+        content_type: "post",
+      })
+      .then((response) => {
+        setItems(response.items);
+        console.log(response.items);
+      })
+      .catch(console.error);
+  }, []);
+
   return (
     <div className="App">
       <header className="App-header">
         <Navbar />
-        <Content />
+        <ul>
+          {items.map((element) => {
+            return (
+              <img
+                src={element.fields.coverImage.fields.file.url}
+                key={element.sys.id}
+              />
+            );
+          })}
+        </ul>
+
+        {/* <h1>{items[0].fields.title}</h1> */}
       </header>
     </div>
   );
