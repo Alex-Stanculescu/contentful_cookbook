@@ -3,6 +3,7 @@ import Content from "./components/Content";
 import Navbar from "./components/Navbar";
 import { useEffect, useState } from "react";
 import client from "./client";
+import Footer from "./components/Footer";
 
 function App() {
   const [items, setItems] = useState([]);
@@ -36,6 +37,7 @@ function App() {
 
         {/* <h1>{items[0].fields.title}</h1> */}
       </header>
+      <Footer />
     </div>
   );
 }
