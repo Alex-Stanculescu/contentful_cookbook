@@ -3,7 +3,7 @@ import Navbar from "./components/Navbar";
 import { useEffect, useState } from "react";
 import client from "./client";
 import Footer from "./components/Footer";
-
+import CategoriesContainer from "./components/CategoriesContainer";
 
 function App() {
   const [items, setItems] = useState([]);
@@ -24,7 +24,8 @@ function App() {
     <div className="App">
       <header className="App-header">
         <Navbar />
-        <ul>
+        <CategoriesContainer />
+        {/* <ul>
           {items.map((element) => {
             return (
               <img
@@ -34,7 +35,7 @@ function App() {
               />
             );
           })}
-        </ul>
+        </ul> */}
 
         {/* <h1>{items[0].fields.title}</h1> */}
       </header>
