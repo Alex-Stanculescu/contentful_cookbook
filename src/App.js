@@ -1,9 +1,9 @@
 import "./App.css";
-import Content from "./components/Content";
 import Navbar from "./components/Navbar";
 import { useEffect, useState } from "react";
 import client from "./client";
 import Footer from "./components/Footer";
+
 
 function App() {
   const [items, setItems] = useState([]);
@@ -28,6 +28,7 @@ function App() {
           {items.map((element) => {
             return (
               <img
+                alt="img_of_food"
                 src={element.fields.coverImage.fields.file.url}
                 key={element.sys.id}
               />
