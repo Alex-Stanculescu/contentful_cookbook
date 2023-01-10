@@ -1,17 +1,15 @@
 import React from "react";
-import CategoriesContainer from "./CategoriesContainer";
+import "./CategoryCard.css";
 
-export default function CategoryCard({ categoryCardsArray }) {
+export default function CategoryCard({ card }) {
   return (
     <div>
-      {categoryCardsArray.map((element) => (
-        <div className="card" style={{ width: "18rem" }}>
-          <img src={element.src} className="card-img-top" alt="..." />
-          <div className="card-body">
-            <p className="card-text">{element.title}</p>
-          </div>
+      <div className="card" style={{ width: "18rem" }}>
+        <img src={card.src} className="card-img-top" alt="..." />
+        <div className="card-body">
+          <p className="card-text">{card.title}</p>
         </div>
-      ))}
+      </div>
     </div>
   );
 }
