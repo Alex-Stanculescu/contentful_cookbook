@@ -4,6 +4,8 @@ import { useEffect, useState } from "react";
 import client from "./client";
 import Footer from "./components/Footer";
 import CategoriesContainer from "./components/CategoriesContainer";
+import { Routes, Route, Link, NavLink, useNavigate } from "react-router-dom";
+
 
 function App() {
   const [items, setItems] = useState([]);
@@ -24,7 +26,15 @@ function App() {
     <div className="App">
       <header className="App-header">
         <Navbar />
-        <CategoriesContainer />
+        {/* <CategoriesContainer /> */}
+
+        <Routes>
+        <Route path="/" element={<CategoriesContainer />} />
+        {/* <Route path="/about" element={<About />} />
+        <Route path="/products" element={<Products />} />
+        <Route path="/products/:id" element={<Product />} /> */}
+      </Routes>
+
         {/* <ul>
           {items.map((element) => {
             return (
