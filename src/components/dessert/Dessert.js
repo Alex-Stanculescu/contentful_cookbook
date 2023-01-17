@@ -1,29 +1,18 @@
 import {useNavigate, useParams} from 'react-router-dom';
 
-const desserts = [
-  {
-      id: 1,
-      name: "tiramisu"
-  },
-  {
-      id: 2,
-      name: "natillas"
-  }
-]
-
-function Dessert() {
+function Dessert({items}) {
     const navigate = useNavigate();
     const {id} = useParams();
     console.log(id);
   return (
     <div>
-      {id && desserts
-        .filter((dessert) => id == dessert.id)
-        .map((dessert) => (
+      {id && items
+        .filter((item) => id == item.sys.id)
+        .map((item) => (
           <div>
-            <h3>{dessert.name}</h3>
+            <h3>{item.fields.title}</h3>
             <button onClick={() => navigate('/')}>Go back to main</button>
-            <button onClick={() => navigate('/desserts')}>Go back Desserts</button>
+            <button onClick={() => navigate('/dessert')}>Go back Desserts</button>
           </div>
       ))}
     </div>

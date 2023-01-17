@@ -7,6 +7,7 @@ import CategoriesContainer from "./components/CategoriesContainer";
 import { Routes, Route, Link, NavLink, useNavigate } from "react-router-dom";
 import Desserts from './components/dessert/Desserts';
 import Dessert from './components/dessert/Dessert';
+import Dinners from './components/dinner/Dinners'
 
 
 function App() {
@@ -32,14 +33,12 @@ function App() {
 
         <Routes>
           <Route path="/" element={<CategoriesContainer />} />
-          <Route path="/desserts" element={<Desserts />} />
-          <Route path="/desserts/:id" element={<Dessert />} />
+          <Route path="/dessert" element={<Desserts items={items} />} />
+          <Route path="/dessert/:id" element={<Dessert items={items} />} />
           <Route path="/breakfast" element={<Desserts />} />
           <Route path="/lunch" element={<Desserts />} />
-          <Route path="/dinner" element={<CategoriesContainer />} />
-        {/* <Route path="/about" element={<About />} />
-        <Route path="/products" element={<Products />} />
-        <Route path="/products/:id" element={<Product />} /> */}
+          <Route path="/dinner" element={<Dinners items={items} />} />
+      
       </Routes>
 
         {/* <ul>
