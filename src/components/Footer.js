@@ -1,10 +1,12 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 
+
+
 function Footer() {
   return (
     <>
-      <div className="card text-center">
+      <div className="card text-center footer">
         <div className="card-header">Featured</div>
         <div className="card-body">
           <h5 className="card-title">Special food recommendations</h5>
