@@ -13,7 +13,7 @@ function Lunches({items}){
                   <div className="card-card" style={{ width: "18rem" }}>
                     <img src={item.fields.coverImage.fields.file.url} className="card-img-top" alt="..." />
                     <div className="card-body">
-                      <p className="card-text">{item.fields.title}</p>
+                      <p className="card-text"></p>
                       <button onClick={() => navigate(`/${item.fields.title.toLowerCase()}`)}>{item.fields.title}</button>
                     </div>
                   </div>

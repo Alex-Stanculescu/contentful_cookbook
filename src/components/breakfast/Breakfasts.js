@@ -13,8 +13,8 @@ function Breakfasts({items}){
                   <div className="card-card" style={{ width: "18rem" }}>
                     <img src={item.fields.coverImage.fields.file.url} className="card-img-top" alt="..." />
                     <div className="card-body">
-                      <p className="card-text">{item.fields.title}</p>
-                      <button onClick={() => navigate(`/dessert/${item.sys.id}`)}>{item.fields.title}</button>
+                      <p className="card-text"></p>
+                      <button onClick={() => navigate(`/breakfasts/${item.sys.id}`)}>{item.fields.title}</button>
                     </div>
                   </div>
                 </div>

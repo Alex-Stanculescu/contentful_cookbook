@@ -28,6 +28,9 @@ export default function CategoriesContainer({ categories }) {
 
 
   return (
+    <>
+    <br></br>
+    <h1> Welcome to our Cookbook ♥</h1>
     <div className="container">
       <Container>
         {categoryCardsArray.map((card) => {
@@ -35,5 +38,6 @@ export default function CategoriesContainer({ categories }) {
         })}
       </Container>
     </div>
+    </>
   );
 }

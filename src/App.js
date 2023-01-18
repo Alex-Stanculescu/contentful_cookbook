@@ -8,8 +8,11 @@ import { Routes, Route, Link, NavLink, useNavigate } from "react-router-dom";
 import Desserts from './components/dessert/Desserts';
 import Dessert from './components/dessert/Dessert';
 import Dinners from './components/dinner/Dinners'
+import Dinner from "./components/dinner/Dinner";
+import Lunch from "./components/lunch/Lunch";
 import Lunches from "./components/lunch/Lunches";
 import Breakfasts from "./components/breakfast/Breakfasts";
+import Breakfast from "./components/breakfast/Breakfast";
 
 
 
@@ -39,8 +42,11 @@ function App() {
           <Route path="/dessert" element={<Desserts items={items} />} />
           <Route path="/dessert/:id" element={<Dessert items={items} />} />
           <Route path="/breakfast" element={<Breakfasts items={items} />} />
+          <Route path="/breakfast/:id" element={<Breakfast items={items} />} />
           <Route path="/lunch" element={<Lunches items={items} />} />
+          <Route path="/lunch/:id" element={<Lunch items={items} />} />
           <Route path="/dinner" element={<Dinners items={items} />} />
+          <Route path="/dinner/:id" element={<Dinner items={items} />} />
       
       </Routes>
 

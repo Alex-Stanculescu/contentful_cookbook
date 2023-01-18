@@ -7,11 +7,12 @@ export default function CategoryCard({ card }) {
   
   return (
     <div>
+      
       <Link to={`/${card.title.toLowerCase()}`}>
         <div className="card" style={{ width: "18rem" }}>
           <img src={card.src} className="card-img-top" alt="..." />
           <div className="card-body">
-            <p className="card-text">{card.title}</p>
+            <p className="card-text"></p>
             <button onClick={() => navigate(`/${card.title.toLowerCase()}`)}>{card.title}</button>
           </div>
         </div>
