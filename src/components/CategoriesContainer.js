@@ -30,7 +30,7 @@ export default function CategoriesContainer({ categories }) {
   return (
     <>
     <br></br>
-    <h1> Welcome to our Cookbook ♥</h1>
+    <h1 style={{ fontWeight: 'bold' }}> Welcome to our Cookbook ♥</h1>
     <div className="container">
       <Container>
         {categoryCardsArray.map((card) => {

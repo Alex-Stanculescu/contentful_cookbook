@@ -5,7 +5,7 @@ function Dinners({items}){
   const navigate = useNavigate();
   return (
     <div>
-      <h1>Dinner</h1>
+      <h1>Dinner ♥</h1>
             {items
               .filter(item => item.fields.dinner === 'Dinner')
               .map((item) => (
