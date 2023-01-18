@@ -10,7 +10,7 @@ function Desserts({items}){
               .filter(item => item.fields.dinner === 'Dessert')
               .map((item) => (
                 <div>
-                  <div className="card" style={{ width: "18rem" }}>
+                  <div className="card-card" style={{ width: "18rem" }}>
                     <img src={item.fields.coverImage.fields.file.url} className="card-img-top" alt="..." />
                     <div className="card-body">
                       <p className="card-text">{item.fields.title}</p>

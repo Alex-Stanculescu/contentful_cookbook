@@ -8,6 +8,9 @@ import { Routes, Route, Link, NavLink, useNavigate } from "react-router-dom";
 import Desserts from './components/dessert/Desserts';
 import Dessert from './components/dessert/Dessert';
 import Dinners from './components/dinner/Dinners'
+import Lunches from "./components/lunch/Lunches";
+import Breakfasts from "./components/breakfast/Breakfasts";
+
 
 
 function App() {
@@ -35,8 +38,8 @@ function App() {
           <Route path="/" element={<CategoriesContainer />} />
           <Route path="/dessert" element={<Desserts items={items} />} />
           <Route path="/dessert/:id" element={<Dessert items={items} />} />
-          <Route path="/breakfast" element={<Desserts />} />
-          <Route path="/lunch" element={<Desserts />} />
+          <Route path="/breakfast" element={<Breakfasts items={items} />} />
+          <Route path="/lunch" element={<Lunches items={items} />} />
           <Route path="/dinner" element={<Dinners items={items} />} />
       
       </Routes>

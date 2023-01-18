@@ -5,12 +5,12 @@ function Dinners({items}){
   const navigate = useNavigate();
   return (
     <div>
-      <h1>Desserts</h1>
+      <h1>Dinner</h1>
             {items
               .filter(item => item.fields.dinner === 'Dinner')
               .map((item) => (
                 <div>
-                  <div className="card" style={{ width: "18rem" }}>
+                  <div className="card-card" style={{ width: "18rem" }}>
                     <img src={item.fields.coverImage.fields.file.url} className="card-img-top" alt="..." />
                     <div className="card-body">
                       <p className="card-text">{item.fields.title}</p>
