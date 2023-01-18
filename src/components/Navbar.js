@@ -7,7 +7,7 @@ export default function Navbar() {
       <nav className="navbar navbar-expand-lg bg-body-tertiary">
         <div className="container-fluid">
           <a className="navbar-brand" href="#">
-            Navbar
+           CookBook mniam 
           </a>
           <button
             className="navbar-toggler"
@@ -29,7 +29,7 @@ export default function Navbar() {
               </li>
               <li className="nav-item">
                 <a className="nav-link" href="#">
-                  Link
+                  Receipts
                 </a>
               </li>
               <li className="nav-item dropdown">
@@ -40,7 +40,7 @@ export default function Navbar() {
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
                 >
-                  Dropdown
+                  About us 
                 </a>
                 <ul className="dropdown-menu">
                   <li>
@@ -64,7 +64,7 @@ export default function Navbar() {
                 </ul>
               </li>
               <li className="nav-item">
-                <a class="nav-link disabled">Disabled</a>
+                <a class="nav-link disabled"></a>
               </li>
             </ul>
             <form className="d-flex" role="search">
